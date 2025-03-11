@@ -4,23 +4,23 @@ import { Link } from 'react-router-dom';
 
 const Blog = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-6 sm:py-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">Blog</h1>
         
         <div className="space-y-8">
           {blogPosts.map((post) => (
             <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="md:flex">
+              <div className="flex flex-col md:flex-row">
                 <div className="md:flex-shrink-0">
                   <img
-                    className="h-48 w-full object-cover md:w-48"
+                    className="h-48 w-full object-cover md:w-48 rounded-t-lg md:rounded-l-lg md:rounded-t-none"
                     src={post.image}
                     alt={post.title}
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center text-sm text-gray-500">
+                <div className="p-4 sm:p-6 flex-grow">
+                  <div className="flex flex-wrap gap-2 items-center text-sm text-gray-500">
                     <span>{post.category}</span>
                     <span className="mx-2">•</span>
                     <span>{post.date}</span>
@@ -41,7 +41,7 @@ const Blog = () => {
                     {post.excerpt}
                   </p>
                   
-                  <div className="mt-4 flex items-center">
+                  <div className="mt-4 flex flex-wrap items-center">
                     <div className="flex-shrink-0">
                       <img
                         className="h-10 w-10 rounded-full"
@@ -53,7 +53,7 @@ const Blog = () => {
                       <p className="text-sm font-medium text-gray-900">
                         {post.author.name}
                       </p>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-gray-500 max-w-[200px] truncate">
                         {post.author.title}
                       </p>
                     </div>

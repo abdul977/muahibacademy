@@ -12,8 +12,8 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-x-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 space-y-8 lg:space-y-0">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -27,7 +27,7 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
               />
             </div>
 
-            <div className="mt-8 grid grid-cols-2 gap-4">
+            <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 sm:gap-4">
               <div className="flex items-center">
                 <Clock className="h-5 w-5 text-indigo-600" />
                 <span className="ml-2 text-sm text-gray-500">{course.duration}</span>
@@ -77,7 +77,7 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
 
             <div className="mt-8">
               <h2 className="text-lg font-medium text-gray-900">What you'll learn</h2>
-              <div className="mt-4 grid grid-cols-1 gap-4">
+              <div className="mt-4 grid grid-cols-1 gap-3 sm:gap-4">
                 {course.outcomes.map((outcome, index) => (
                   <div key={index} className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
@@ -111,7 +111,7 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
 
             <div className="mt-10">
               <h2 className="text-lg font-medium text-gray-900">Upcoming Start Dates</h2>
-              <div className="mt-4 grid grid-cols-2 gap-4">
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {course.startDates.map((date, index) => (
                   <div key={index} className="flex items-center">
                     <Calendar className="h-5 w-5 text-indigo-600" />

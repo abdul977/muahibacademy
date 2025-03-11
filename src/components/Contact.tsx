@@ -25,14 +25,14 @@ const Contact = () => {
 
   return (
     <div className="bg-white">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-8 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900">
               Get in Touch
             </h2>
             <p className="mt-4 text-lg text-gray-500">
@@ -40,10 +40,10 @@ const Contact = () => {
               We're here to help you begin your journey in digital education.
             </p>
 
-            <div className="mt-8 space-y-6">
+            <div className="mt-6 sm:mt-8 space-y-4 sm:space-y-6">
               <div className="flex items-center">
                 <Mail className="h-6 w-6 text-indigo-600" />
-                <span className="ml-3 text-gray-500">
+                <span className="ml-3 text-gray-500 text-sm sm:text-base">
                   Abdulmuminibrahim74@gmail.com
                 </span>
               </div>
@@ -66,9 +66,9 @@ const Contact = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="mt-12 sm:mt-16 md:mt-0"
+            className="mt-8 sm:mt-12 md:mt-0"
           >
-            <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-6">
+            <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-4 sm:gap-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                   Name
@@ -80,7 +80,7 @@ const Contact = () => {
                     id="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                    className="py-2 sm:py-3 px-3 sm:px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md text-sm sm:text-base"
                     required
                   />
                 </div>
@@ -136,7 +136,7 @@ const Contact = () => {
               <div>
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center w-full px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="inline-flex items-center justify-center w-full px-4 sm:px-6 py-2.5 sm:py-3 border border-transparent rounded-md shadow-sm text-sm sm:text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   <Send className="h-5 w-5 mr-2" />
                   Send Message

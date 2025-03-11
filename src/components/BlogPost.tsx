@@ -8,9 +8,9 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-2xl font-bold text-gray-900">Blog post not found</h1>
+    <div className="container mx-auto px-4 py-6 sm:py-8">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Blog post not found</h1>
           <Link to="/blog" className="mt-4 text-indigo-600 hover:text-indigo-800">
             Return to blog
           </Link>
@@ -20,18 +20,18 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-6 sm:py-8">
       <div className="max-w-4xl mx-auto">
         <img
           src={post.image}
           alt={post.title}
-          className="w-full h-64 object-cover rounded-lg shadow-md mb-8"
+          className="w-full h-48 sm:h-64 md:h-72 object-cover rounded-lg shadow-md mb-6 sm:mb-8"
         />
 
-        <div className="flex items-center mb-8">
+        <div className="flex items-center mb-6 sm:mb-8">
           <div className="flex-shrink-0">
             <img
-              className="h-12 w-12 rounded-full"
+              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full"
               src={post.author.image}
               alt={post.author.name}
             />
@@ -48,20 +48,20 @@ const BlogPost = () => {
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
         
-        <div className="flex flex-wrap gap-2 mb-8">
+        <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
           {post.tags.map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800"
+              className="inline-flex items-center px-2.5 sm:px-3 py-0.5 rounded-full text-xs sm:text-sm font-medium bg-indigo-100 text-indigo-800"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <div className="prose prose-indigo max-w-none">
+        <div className="prose prose-sm sm:prose prose-indigo max-w-none">
           {post.content.split('\n\n').map((paragraph, index) => (
             <p key={index} className="mb-4 text-gray-700 leading-relaxed">
               {paragraph.trim()}
@@ -69,7 +69,7 @@ const BlogPost = () => {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200">
+        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-200">
           <Link 
             to="/blog" 
             className="text-indigo-600 hover:text-indigo-800 font-medium"

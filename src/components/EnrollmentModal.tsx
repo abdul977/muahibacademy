@@ -62,7 +62,7 @@ ${course.startDates.map(date => new Date(date).toLocaleDateString('en-US', {
     <AnimatePresence>
       {isOpen && (
         <div 
-          className="fixed inset-0 z-[100] overflow-y-auto bg-gray-500 bg-opacity-75 transition-opacity"
+          className="fixed inset-0 z-[100] overflow-y-auto bg-gray-500 bg-opacity-75 transition-opacity px-4 sm:px-0"
           onClick={(e) => {
             if (e.target === e.currentTarget) onClose();
           }}
@@ -72,15 +72,15 @@ ${course.startDates.map(date => new Date(date).toLocaleDateString('en-US', {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6"
+              className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all w-full mx-auto mt-16 sm:my-8 sm:w-full sm:max-w-lg sm:p-6"
             >
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-medium leading-6 text-gray-900">
+                <h3 className="text-base sm:text-lg font-medium leading-6 text-gray-900 pr-8">
                   Enroll in {course.title}
                 </h3>
                 <button
                   onClick={onClose}
-                  className="absolute right-4 top-4 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="absolute right-3 top-3 sm:right-4 sm:top-4 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   <X className="h-6 w-6" />
                 </button>
@@ -98,7 +98,7 @@ ${course.startDates.map(date => new Date(date).toLocaleDateString('en-US', {
                     required
                     value={formData.fullName}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm py-2 px-3"
                   />
                 </div>
 
@@ -165,7 +165,7 @@ ${course.startDates.map(date => new Date(date).toLocaleDateString('en-US', {
                 <div className="mt-8">
                   <button
                     type="submit"
-                    className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
+                  className="w-full flex justify-center items-center py-2.5 sm:py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
                   >
                     Proceed to WhatsApp
                   </button>
