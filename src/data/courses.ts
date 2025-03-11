@@ -58,31 +58,31 @@ export const instructors: Instructor[] = [
 
 export const departments: Department[] = [
   {
-    id: 'ecommerce',
-    name: 'E-commerce',
-    description: 'Master online store management, platform selection, and inventory control',
-    icon: 'ShoppingBag',
+    id: 'finance',
+    name: 'Finance & Investment',
+    description: 'Master financial management, investment strategies, and market analysis. Our comprehensive finance courses cover everything from basic investment principles to advanced portfolio management.',
+    icon: 'Coins',
     courses: [
       {
-        id: 'ec101',
-        title: 'E-commerce Fundamentals',
-        description: 'Learn the basics of setting up and managing an online store',
-        duration: '6 weeks',
+        id: 'fin101',
+        title: 'Investment Fundamentals',
+        description: 'Master the basics of investing and portfolio management. Learn how to analyze financial markets, understand risk management, and make informed investment decisions.',
+        duration: '8 weeks',
         price: "35,000 naira",
-        instructor: instructors[0],
-        department: { id: 'ecommerce', name: 'E-commerce', description: '', icon: 'ShoppingBag' },
+        instructor: instructors[3],
+        department: { id: 'finance', name: 'Finance & Investment', description: '', icon: 'Coins' },
         outcomes: [
-          'Set up an online store',
-          'Choose the right e-commerce platform',
-          'Manage inventory effectively',
-          'Handle shipping and fulfillment',
-          'Process payments securely'
+          'Understand investment principles',
+          'Create diversified portfolios',
+          'Analyze financial markets',
+          'Manage investment risk',
+          'Make informed investment decisions'
         ],
         level: 'Beginner',
-        prerequisites: ['Basic computer skills', 'Understanding of business concepts'],
-        startDates: ['2024-04-01', '2024-05-15', '2024-07-01'],
-        thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-        rating: 4.8,
+        prerequisites: ['Basic math skills', 'Interest in finance'],
+        startDates: ['2024-04-01', '2024-06-15', '2024-08-01'],
+        thumbnail: 'https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        rating: 4.6,
         studentsEnrolled: 1250,
         syllabus: [
           {
