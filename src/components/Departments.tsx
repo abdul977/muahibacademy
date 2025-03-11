@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ShoppingBag, Megaphone, TrendingUp, Coins } from 'lucide-react';
 import { departments } from '../data/courses';
 
@@ -41,9 +42,9 @@ const Departments = () => {
                   </div>
                   <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2">{dept.name}</h3>
                   <p className="text-sm sm:text-base text-gray-500">{dept.description}</p>
-                  <a
-                    href={`/departments/${dept.id}`}
-                    className="mt-3 sm:mt-4 inline-flex items-center text-sm sm:text-base text-indigo-600 hover:text-indigo-500"
+                  <Link
+                    to={`/departments/${dept.id}`}
+                    className="mt-3 sm:mt-4 inline-flex items-center text-sm sm:text-base text-indigo-600 hover:text-indigo-500 group"
                   >
                     Learn more
                     <svg
@@ -58,7 +59,7 @@ const Departments = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             );

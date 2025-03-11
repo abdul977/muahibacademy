@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FeaturedCourses from './components/FeaturedCourses';
 import Departments from './components/Departments';
+import DepartmentPage from './components/DepartmentPage';
 import Testimonials from './components/Testimonials';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -33,6 +34,7 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:id" element={<CourseDetailPage />} />
+            <Route path="/departments/:id" element={<DepartmentPage />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
           </Routes>
